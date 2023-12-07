@@ -15,9 +15,9 @@ VENDOR=google
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}/../../.."
+HENTAI_ROOT="${MY_DIR}/../../.."
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${HENTAI_ROOT}/vendor/hentai/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -25,13 +25,12 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${HENTAI_ROOT}"
 
 # Warning headers and guards
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
-write_makefiles "${MY_DIR}/proprietary-files-carriersettings.txt" true
 write_makefiles "${MY_DIR}/proprietary-files-vendor.txt" true
 
 # Finish

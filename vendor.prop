@@ -1,3 +1,6 @@
+# BT name
+bluetooth.device.default_name=Pixel 5
+
 # DRM
 drm.service.enabled=true
 media.mediadrmservice.enable=true

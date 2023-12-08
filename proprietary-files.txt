@@ -52,7 +52,6 @@ product/framework/uimservicelibrary.jar
 # Radio
 product/priv-app/DiagMon/DiagMon.apk
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
-product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
 
 # Sprint
 product/etc/permissions/com.android.sdm.plugins.sprintdm.xml

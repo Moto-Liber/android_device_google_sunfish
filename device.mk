@@ -205,6 +205,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/google/sunfish-kernel/sm7150/kernel-headers
+
 # Userdata Checkpointing OTA GC
 PRODUCT_PACKAGES += \
     checkpoint_gc

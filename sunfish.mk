@@ -65,14 +65,8 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := hentai_sunfish
+PRODUCT_NAME := sunfish
 PRODUCT_DEVICE := sunfish
 PRODUCT_MODEL := Pixel 4a
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=sunfish \
-    PRIVATE_BUILD_DESC="sunfish-user 13 TQ3A.230805.001.S1 10786265 release-keys"
-
-BUILD_FINGERPRINT := google/sunfish/sunfish:13/TQ3A.230805.001.S1/10786265:user/release-keys
 
 $(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)

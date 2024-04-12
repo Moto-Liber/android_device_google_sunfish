@@ -107,7 +107,11 @@ TARGET_RECOVERY_UI_LIB := \
 
 # Enable chain partition for system.
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
+ifeq ($(wildcard $(PROD_CERTS)/hentai_security.mk),)
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+else
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
+endif
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
